@@ -1,10 +1,41 @@
+<div class="row">
+	
 
+		<div class="col-md-12">
+
+		<br/>
       
-      <% @artists.each do |artist| %>
-        <div>
-          <img src="<%= artist.image_url%>">
-          <%= artist.name  %>
-          <%= link_to "View info", artist_path(artist) %>
-        </div>
-      <% end %>
+	      <% @artists.each do |artist| %>
+	        
+	        <div class = "col-sm-6 col-md-4">
+	        	<div class="thumbnail">
+
+	        		
+		          	<div class="embed-responsive embed-responsive-16by9">
+			         	<img class="img-responsive" src="<%= artist.image_url%>">
+			         </div>
+
+			         <div align="center">
+			          	
+			          	<div class="caption">
+				          	<%= artist.name  %> <br/>
+
+				          	<a href="<%= artist_path(artist) %>" class="btn btn-white btn-primary active">
+		        			<i class="fa fa-cog" aria-hidden="true"></i> View Info
+		    				</a>
+
+	    				</div>
+
+		          	</div>
+
+	        	</div>
+	        </div>
+
+
+
+	      <% end %>
+
+	     </div>
+
+</div>
      

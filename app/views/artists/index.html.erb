@@ -1,0 +1,10 @@
+
+      
+      <% @artists.each do |artist| %>
+        <div>
+          <img src="<%= artist.image_url%>">
+          <%= artist.name  %>
+          <%= link_to "View info", artist_path(artist) %>
+        </div>
+      <% end %>
+     
